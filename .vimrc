@@ -403,6 +403,7 @@ let g:LookupFile_SortMethod = ""                "关闭对搜索结果的字母�
 
 let g:indent_guides_guide_size=1
 
-let g:syntastic_mode_map = { 'mode': 'active',
+let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'php', 'js'],
                            \ 'passive_filetypes': ['puppet'] }
+let g:syntastic_auto_loc_list=1

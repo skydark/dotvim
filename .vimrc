@@ -177,7 +177,7 @@ nnoremap <silent> <F2> :TocdownToggle<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 "nnoremap <silent> <F8> :Tlist<CR>
 nnoremap <silent> <F8> :TagbarToggle<CR>
-nmap <silent> <F9> :Explore<cr>
+"nmap <silent> <F9> :Explore<cr>
 
 nnoremap <silent> <leader>bb :BufExplorerVerticalSplit<CR>
 nmap <C-S-n> :bn<cr>
@@ -388,18 +388,6 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "========================
 
 let g:NERDSpaceDelims=1
-
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
-let Tlist_Use_Right_Window=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Show_One_File=0
-
-let g:LookupFile_MinPatLength = 2               "最少输入2个字符才开始查找
-let g:LookupFile_PreserveLastPattern = 0        "不保存上次查找的字符串
-let g:LookupFile_PreservePatternHistory = 1     "保存查找历史
-let g:LookupFile_AlwaysAcceptFirst = 1          "回车打开第一个匹配项目
-let g:LookupFile_AllowNewFiles = 0              "不允许创建不存在的文件
-let g:LookupFile_SortMethod = ""                "关闭对搜索结果的字母排序
 
 let g:indent_guides_guide_size=1
 

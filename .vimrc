@@ -63,7 +63,7 @@ if has("autocmd")
     "80列后高亮
     "set textwidth=80
     "set cc=+1
-    if v:version > 703
+    if v:version >= 703
         set cc=80
     else
         au BufRead,BufNewFile * match DiffAdd '\%>80v.*'

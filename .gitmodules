@@ -3,7 +3,7 @@
 	url = git://github.com/chumakd/conque-shell-mirror.git
 [submodule "bundle/fcitx.vim"]
 	path = bundle/fcitx.vim
-	url = git://github.com/vim-scripts/fcitx.vim.git
+	url = git://github.com/skydark/fcitx.vim.git
 [submodule "bundle/FuzzyFinder"]
 	path = bundle/FuzzyFinder
 	url = git://github.com/vim-scripts/FuzzyFinder.git

@@ -61,11 +61,13 @@ filetype plugin on
 
 if has("autocmd")
     "80列后高亮
-    ""au BufRead,BufNewFile *.c,*.cpp,*.py match DiffAdd '\%>80v.*'
-    "au BufRead,BufNewFile * match DiffAdd '\%>80v.*'
     "set textwidth=80
     "set cc=+1
-    set cc=80
+    if v:version > 703
+        set cc=80
+    else
+        au BufRead,BufNewFile * match DiffAdd '\%>80v.*'
+    endif
     ""au BufRead,BufNewFile *.c,*.cpp,*.py match Underlined /.\%81v/
     ""au BufRead,BufNewFile *.c,*.cpp,*.py match Error /\%80v.\%81v./
 

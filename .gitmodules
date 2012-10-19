@@ -55,3 +55,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/sudo.vim"]
+	path = bundle/sudo.vim
+	url = git://github.com/vim-scripts/sudo.vim.git

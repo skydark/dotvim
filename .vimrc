@@ -272,7 +272,7 @@ func! SDRun2()
         exec b:sd_run_command
     endif
 endfunc
-map <leader>r :call SDRun()<CR>
+map <leader>R :call SDRun()<CR>
 map <F5> :call SDRun2()<CR>
 
 " }}}1

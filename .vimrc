@@ -148,16 +148,12 @@ map <silent> <leader>w :w<cr>
 map <silent> <leader>q :q<cr>
 nmap <leader>m :make<CR>
 nmap <leader>c :cd %:p:h<CR>
-"nmap <leader>o <Plug>LookupFile<CR>
-nmap <leader>o :FufFile<CR>
-nmap <leader>oo :FufFileWithCurrentBufferDir<CR>
-nmap <leader>l :FufLine<CR>
-nmap <leader>b :FufBuffer<CR>
 nmap <leader>v :24Vexplore<cr>
 nmap <leader>term :ConqueTermTab bash<cr>
 nmap <leader>py :ConqueTermTab ipython<cr>
 
 map <silent> <leader>vv :source ~/.vimrc<CR>
+map <silent> <leader>vs :source %<CR>
 
 nmap <leader>p :SyntasticCheck<CR>
 nmap <leader>ps :SyntasticToggleMode<CR>
@@ -384,6 +380,25 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+"========================
+" FuzzyFinder 插件设置
+"========================
+
+let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|pyc|aux|dvi|nav|snm|toc|ps|pdf|zip|rar|7z)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+
+let fuzzy_sudo = {}
+
+function fuzzy_sudo.onComplete(item, method)
+    call fuf#openFile(join(["sudo:", a:item], ""), a:method, g:fuf_reuseWindow)
+endfunction
+
+nmap <leader>s :call fuf#callbackfile#launch('', 0, '>', '', fuzzy_sudo)<CR>
+nmap <leader>o :FufFile<CR>
+nmap <leader>oo :FufFileWithCurrentBufferDir<CR>
+nmap <leader>l :FufLine<CR>
+nmap <leader>b :FufBuffer<CR>
+nmap <leader>r :FufRenewCache<CR>
 
 "========================
 " 其他插件设置

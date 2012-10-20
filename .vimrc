@@ -411,7 +411,7 @@ function fuzzy_sudo.onComplete(item, method)
     call fuf#openFile(join(["sudo:", a:item], ""), a:method, g:fuf_reuseWindow)
 endfunction
 
-nmap <leader>s :call fuf#callbackfile#launch('', 0, '>', '', fuzzy_sudo)<CR>
+nmap <leader>s :call fuf#callbackfile#launch('', 0, '>Sudo>', '', fuzzy_sudo)<CR>
 nmap <leader>o :FufFile<CR>
 nmap <leader>oo :FufFileWithCurrentBufferDir<CR>
 nmap <leader>l :FufLine<CR>

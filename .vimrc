@@ -6,9 +6,9 @@ endif
 
 call pathogen#infect()
 
-"========================
-" 字体与外观
-"========================
+"==========================
+" 字体与外观           {{{1
+"==========================
 set mouse=a
 set tabstop=4
 set shiftwidth=4
@@ -52,9 +52,11 @@ else
     colorscheme molokai
 endif
 
-"========================
-" 文件类型支持
-"========================
+" }}}1
+
+"==========================
+" 文件类型支持         {{{1
+"==========================
 
 filetype on
 filetype plugin on
@@ -103,9 +105,11 @@ if has("autocmd")
     au BufWritePost * filet detect
 endif
 
-"========================
-" Markdown设置
-"========================
+" }}}1
+
+"==========================
+" Markdown设置         {{{1
+"==========================
 function! MarkdownLevel()
     if getline(v:lnum) =~ '^# .*$'
         return ">1"
@@ -133,9 +137,11 @@ if has("autocmd")
     au BufEnter *.md setlocal foldmethod=expr
 endif
 
-"========================
-" 按键映射
-"========================
+" }}}1
+
+"==========================
+" 按键映射             {{{1
+"==========================
 let mapleader=','
 nmap da :s/\s\+$//<CR>
 map <C-h> :noh<cr>
@@ -202,9 +208,11 @@ imap <C-s> <C-o>:w<cr>
 imap <silent> <M-1> <C-o>:tabprev<cr>
 imap <silent> <M-2> <C-o>:tabnext<cr>
 
-"========================
-" LaTeX Suite 设置
-"========================
+" }}}1
+
+"==========================
+" LaTeX Suite 设置     {{{1
+"==========================
 
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_FormatDependency_ps = 'dvi,ps'
@@ -221,9 +229,11 @@ set grepprg=grep\ -nH\ $*
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-"========================
-" 词典
-"========================
+" }}}1
+
+"==========================
+" 词典                 {{{1
+"==========================
 function! Mydict()
     let expl=system('sdcv -n ' .
         \ expand("<cword>"))
@@ -237,9 +247,11 @@ function! Mydict()
 endfunction
 nmap <leader>d :call Mydict()<cr>
 
-"========================
-" 运行程序
-"========================
+" }}}1
+
+"==========================
+" 运行程序             {{{1
+"==========================
 
 au FileType * let b:sd_run_command=''
 autocmd FileType python let b:sd_run_command="!python %"
@@ -263,9 +275,11 @@ endfunc
 map <leader>r :call SDRun()<CR>
 map <F5> :call SDRun2()<CR>
 
-""========================
-"" 工程支持
-""========================
+" }}}1
+
+""==========================
+"" 工程支持             {{{1
+""==========================
 "if has("cscope")
 "    " add any database in current directory
 "    set nocsverb
@@ -298,9 +312,11 @@ endfunc
 nmap <leader>root :call SetHereTheRoot()<CR>
 nmap <leader>xroot :call SetSpecifiedPathTheRoot()<CR>
 
-"========================
-" Neocomplcache设置
-"========================
+" }}}1
+
+"==========================
+" Neocomplcache设置    {{{1
+"==========================
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -381,9 +397,11 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
-"========================
-" FuzzyFinder 插件设置
-"========================
+" }}}1
+
+"==========================
+" FuzzyFinder 插件设置 {{{1
+"==========================
 
 let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|pyc|aux|dvi|nav|snm|toc|ps|pdf|zip|rar|7z)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 
@@ -400,9 +418,11 @@ nmap <leader>l :FufLine<CR>
 nmap <leader>b :FufBuffer<CR>
 nmap <leader>r :FufRenewCache<CR>
 
-"========================
-" 其他插件设置
-"========================
+" }}}1
+
+"==========================
+" 其他插件设置         {{{1
+"==========================
 
 let g:NERDSpaceDelims=1
 
@@ -412,3 +432,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'php', 'js'],
                            \ 'passive_filetypes': ['puppet'] }
 let g:syntastic_auto_loc_list=1
+
+" }}}1
+"=============================================================================
+" vim: set fdm=marker:

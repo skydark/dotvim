@@ -441,6 +441,7 @@ let g:syntastic_auto_loc_list=1
 let g:dwm_map_keys=0
 let g:dwm_master_pane_width=86
 
+nnoremap <leader>h <C-W>h
 nnoremap <leader>j <C-W>w
 nnoremap <leader>k <C-W>W
 

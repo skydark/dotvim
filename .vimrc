@@ -6,6 +6,8 @@ endif
 
 call pathogen#infect()
 
+set sessionoptions-=options
+
 "==========================
 " 字体与外观           {{{1
 "==========================
@@ -96,6 +98,7 @@ if has("autocmd")
     au FileType lisp set et
     au FileType lisp set fdm=marker
     au FileType lisp set fmr=(,)
+    au FileType tex set et
     au FileType javascript set omnifunc=javascrīptcomplete#CompleteJS
     au FileType html set omnifunc=htmlcomplete#CompleteTags
     au FileType css set omnifunc=csscomplete#CompleteCSS

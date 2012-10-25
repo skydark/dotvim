@@ -29,6 +29,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set laststatus=0
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade Comment
 
@@ -435,6 +436,24 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'php', 'js'],
                            \ 'passive_filetypes': ['puppet'] }
 let g:syntastic_auto_loc_list=1
+
+
+let g:dwm_map_keys=0
+let g:dwm_master_pane_width=86
+
+nnoremap <leader>j <C-W>w
+nnoremap <leader>k <C-W>W
+
+nmap <leader>3 :call DWM_Rotate(0)<CR>
+nmap <leader>4 :call DWM_Rotate(1)<CR>
+
+nmap <leader>dn :call DWM_New()<CR>
+nmap <leader>dc :exec_Close()<CR>
+nmap <leader><Space> :call DWM_Focus()<CR>
+
+nmap <leader>dl :call DWM_GrowMaster()<CR>
+nmap <leader>dh :call DWM_ShrinkMaster()<CR>
+
 
 " }}}1
 "=============================================================================

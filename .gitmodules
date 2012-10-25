@@ -58,3 +58,6 @@
 [submodule "bundle/sudo.vim"]
 	path = bundle/sudo.vim
 	url = git://github.com/vim-scripts/sudo.vim.git
+[submodule "bundle/dwm.vim"]
+	path = bundle/dwm.vim
+	url = git://github.com/spolu/dwm.vim.git

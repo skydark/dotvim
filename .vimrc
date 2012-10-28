@@ -447,7 +447,7 @@ let g:NERDSpaceDelims=1
 let g:indent_guides_guide_size=1
 
 let g:syntastic_mode_map = { 'mode': 'passive',
-                           \ 'active_filetypes': ['ruby', 'php', 'js'],
+                           \ 'active_filetypes': ['php', 'js'],
                            \ 'passive_filetypes': ['puppet'] }
 let g:syntastic_auto_loc_list=1
 

@@ -35,6 +35,7 @@ hi link EasyMotionShade Comment
 
 if (has("gui_running"))
     set guifont=Monaco\ 11.5
+    set guifontwide=方正准圆\ 11.5
     "Droid\ Sans\ Mono\ 11.5
     "colorscheme koehler
     "colorscheme solarized
@@ -44,16 +45,19 @@ if (has("gui_running"))
     set guioptions-=T
     set guioptions-=m
     set guitablabel=%M%N\ %10.13f
-    set columns=96
+    set columns=100
     set lines=32
 else
     "colorscheme desert
     set timeoutlen=300
     set ttimeoutlen=100
-    "set t_Co=256
-    set t_Co=32
+    "set t_Co=32
+    set t_Co=256
     colorscheme molokai
 endif
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+hi LineNr ctermbg=none
 
 " }}}1
 

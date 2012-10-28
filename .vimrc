@@ -11,6 +11,20 @@ set sessionoptions-=options
 "==========================
 " 字体与外观           {{{1
 "==========================
+
+function! My256()
+    set t_Co=256
+    source ~/.vim/bundle/vim-css-color/after/syntax/css.vim
+    colorscheme molokai
+    hi VisualNOS ctermbg=239
+    hi Visual ctermbg=238
+    hi Normal ctermbg=none
+    hi NonText ctermbg=none
+    hi LineNr ctermbg=none
+    hi Pmenu ctermbg=none
+    hi Special ctermbg=none
+endfunction
+
 set mouse=a
 set tabstop=4
 set shiftwidth=4
@@ -52,12 +66,8 @@ else
     set timeoutlen=300
     set ttimeoutlen=100
     "set t_Co=32
-    set t_Co=256
-    colorscheme molokai
+    call My256()
 endif
-hi Normal ctermbg=none
-hi NonText ctermbg=none
-hi LineNr ctermbg=none
 
 " }}}1
 
@@ -183,7 +193,7 @@ map <silent> <leader>gc :Gcommit<CR>
 map <silent> <leader>gd :Git diff HEAD<CR>
 
 nmap t1 :set t_Co=32<CR>
-nmap t2 :set t_Co=256<CR>:source ~/.vim/bundle/vim-css-color/after/syntax/css.vim<CR>
+nmap t2 :call My256()<CR>
 
 nnoremap <silent> <F2> :TocdownToggle<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>

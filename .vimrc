@@ -290,7 +290,7 @@ func! SDRun2()
         exec b:sd_run_command
     endif
 endfunc
-map <leader>R :call SDRun()<CR>
+map <leader>r :call SDRun()<CR>
 map <F5> :call SDRun2()<CR>
 
 " }}}1
@@ -434,7 +434,7 @@ nmap <leader>o :FufFile<CR>
 nmap <leader>oo :FufFileWithCurrentBufferDir<CR>
 nmap <leader>l :FufLine<CR>
 nmap <leader>b :FufBuffer<CR>
-nmap <leader>r :FufRenewCache<CR>
+nmap <leader>R :FufRenewCache<CR>
 
 " }}}1
 

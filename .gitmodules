@@ -61,3 +61,6 @@
 [submodule "bundle/dwm.vim"]
 	path = bundle/dwm.vim
 	url = git://github.com/spolu/dwm.vim.git
+[submodule "bundle/genutils"]
+	path = bundle/genutils
+	url = git://github.com/vim-scripts/genutils.git

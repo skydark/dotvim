@@ -119,6 +119,7 @@ if has("autocmd")
     au FileType css set omnifunc=csscomplete#CompleteCSS
     au FileType xml set omnifunc=xmlcomplete#CompleteTags
     au FileType php set omnifunc=phpcomplete#CompletePHP
+    au FileType markdown nnoremap <silent> <F2> :TocdownToggle<CR>
 
     au BufWritePost * filet detect
 endif
@@ -195,7 +196,6 @@ map <silent> <leader>gd :Git diff HEAD<CR>
 nmap t1 :set t_Co=32<CR>
 nmap t2 :call My256()<CR>
 
-nnoremap <silent> <F2> :TocdownToggle<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 "nnoremap <silent> <F8> :Tlist<CR>
 nnoremap <silent> <F8> :TagbarToggle<CR>

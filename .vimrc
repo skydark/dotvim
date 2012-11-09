@@ -298,34 +298,34 @@ map <F5> :call SDRun2()<CR>
 ""==========================
 "" 工程支持             {{{1
 ""==========================
-"if has("cscope")
-"    " add any database in current directory
-"    set nocsverb
-"    cs add ~/.vim/tools/c.out
-"    if filereadable("cscope.out")
-"        cs add cscope.out
-"    elseif filereadable("../cscope.out")
-"        cs add ../cscope.out
-"    elseif filereadable("../../cscope.out")
-"        cs add ../../cscope.out
-"    elseif filereadable("../../../cscope.out")
-"        cs add ../../../cscope.out
-"    endif
-"    set csverb
-"    set csto=0
-"endif
+if has("cscope")
+    " add any database in current directory
+    set csto=1
+    set cst
+    set nocsverb
+    if filereadable("cscope.out")
+        cs add cscope.out
+    elseif filereadable("../cscope.out")
+        cs add ../cscope.out
+    elseif filereadable("../../cscope.out")
+        cs add ../../cscope.out
+    elseif filereadable("../../../cscope.out")
+        cs add ../../../cscope.out
+    endif
+    set csverb
+endif
 
 func! SetRootOfTheProject(path)
     exe 'cd '.a:path
-    exe '!qs gentag'
-    let tagFilePath = genutils#CleanupFileName(a:path.'/filenametags')
-    exe "let g:LookupFile_TagExpr='\"".tagFilePath."\"'"
+    exe '!find . -type f -regex ".*\.\(c\|h\|cpp\)" > cscope.files'
+    exe '!cscope -bq'
+    cs add cscope.out
 endfunc
 func! SetHereTheRoot()
     call SetRootOfTheProject('.')
 endfunc
 func! SetSpecifiedPathTheRoot()
-    call SetRootOfTheProject(input('Inupt your root path:'))
+    call SetRootOfTheProject(input('Input your root path:'))
 endfunc
 nmap <leader>root :call SetHereTheRoot()<CR>
 nmap <leader>xroot :call SetSpecifiedPathTheRoot()<CR>

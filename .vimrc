@@ -43,12 +43,15 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set laststatus=0
+set laststatus=2
+set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme = 'solarized256'
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade Comment
 
 if (has("gui_running"))
-    set guifont=Monaco\ 11.5
+    set guifont=Monaco\ for\ Powerline\ 11.5
     set guifontwide=方正准圆\ 11.5
     "Droid\ Sans\ Mono\ 11.5
     "colorscheme koehler

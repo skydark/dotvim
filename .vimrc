@@ -24,6 +24,7 @@ function! My256()
     hi Pmenu ctermbg=none
     hi Special ctermbg=none
 endfunction
+hi TagbarHighlight ctermbg=none
 
 set mouse=a
 set tabstop=4

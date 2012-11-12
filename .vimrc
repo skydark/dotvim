@@ -48,6 +48,7 @@ set laststatus=2
 set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
+let g:Powerline_stl_path_style='short'
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade Comment
 

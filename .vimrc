@@ -115,6 +115,8 @@ if has("autocmd")
     let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
     au FileType python set omnifunc=pythoncomplete#Complete
     au FileType ruby set fdm=syntax
+    au FileType ruby set et
+    au FileType scheme set et
     au FileType lisp set et
     au FileType lisp set fdm=marker
     au FileType lisp set fmr=(,)

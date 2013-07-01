@@ -53,7 +53,7 @@ hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade Comment
 
 if (has("gui_running"))
-    set guifont=Monaco\ for\ Powerline\ 11.5
+    set guifont=Monaco\ 11.5
     set guifontwide=方正准圆\ 11.5
     "Droid\ Sans\ Mono\ 11.5
     "colorscheme koehler

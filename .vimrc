@@ -183,6 +183,7 @@ nmap <leader>m :make<CR>
 nmap <leader>c :cd %:p:h<CR>
 nmap <leader>v :24Vexplore<cr>
 nmap <leader>term :ConqueTermTab bash<cr>
+nmap <leader>zsh :ConqueTermTab zsh<cr>
 nmap <leader>py :ConqueTermTab ipython<cr>
 
 map <silent> <leader>vv :source ~/.vimrc<CR>

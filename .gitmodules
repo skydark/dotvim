@@ -76,3 +76,9 @@
 [submodule "bundle/indentLine"]
 	path = bundle/indentLine
 	url = git@github.com:Yggdroot/indentLine.git
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = git@github.com:Shougo/vimproc.vim.git
+[submodule "bundle/vimshell.vim"]
+	path = bundle/vimshell.vim
+	url = git@github.com:Shougo/vimshell.vim.git

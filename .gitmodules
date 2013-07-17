@@ -82,3 +82,6 @@
 [submodule "bundle/vimshell.vim"]
 	path = bundle/vimshell.vim
 	url = git@github.com:Shougo/vimshell.vim.git
+[submodule "bundle/splitjoin.vim.git"]
+	path = bundle/splitjoin.vim.git
+	url = git@github.com:AndrewRadev/splitjoin.vim.git

@@ -185,6 +185,7 @@ nmap <leader>v :24Vexplore<cr>
 nmap <leader>term :ConqueTermTab bash<cr>
 nmap <leader>zsh :ConqueTermTab zsh<cr>
 nmap <leader>py :ConqueTermTab ipython<cr>
+nmap <leader>enc :edit! ++enc=
 
 map <silent> <leader>vv :source ~/.vimrc<CR>
 map <silent> <leader>vs :source %<CR>

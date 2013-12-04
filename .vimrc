@@ -288,6 +288,8 @@ autocmd FileType ruby let b:sd_run_command="!ruby %"
 autocmd FileType scheme let b:sd_run_command="!guile %"
 autocmd FileType scheme let b:sd_run_command2="!racket -r %"
 autocmd FileType go let b:sd_run_command="!go run %"
+autocmd FileType pandoc let b:sd_run_command="!~/myscripts/qs pandoc %"
+autocmd FileType pandoc let b:sd_run_command2="!~/myscripts/qs pandoc % latex"
 "autocmd FileType scheme let b:sd_run_command2="!csi -s %"
 func! SDRun()
     exec "w"

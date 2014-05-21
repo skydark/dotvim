@@ -36,7 +36,7 @@ set backspace=2
 set whichwrap=b,s,<,>,[,],h
 set cino=:0g0t0
 let &termencoding=&encoding
-set fileencodings=utf-8,gbk,ucs-bom,cp936,gb18030,euc-jp,shift-jis
+set fileencodings=ucs-bom,utf-8,cp936,gbk,gb18030,big5,euc-jp,shift-jis,latin1
 set nu
 set hlsearch
 set rulerformat=%55(%{strftime('%b%e日\ 星期%a\ %p\ %I:%M:%S\')}\ %5l,%-6(%c%V%)\ %P%)

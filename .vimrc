@@ -282,7 +282,7 @@ nmap <leader>d :call Mydict()<cr>
 "==========================
 
 au FileType * let b:sd_run_command=''
-autocmd FileType python let b:sd_run_command="!python %"
+autocmd FileType python let b:sd_run_command="!python '%'"
 autocmd FileType python let b:sd_run_command2="!python2 %"
 autocmd FileType ruby let b:sd_run_command="!ruby %"
 autocmd FileType scheme let b:sd_run_command="!guile %"
